@@ -9,7 +9,7 @@ and verify that both driver and CUDA versions are correct
 4. Run `bash 3_install_essential_softwares.sh`
 
 ---
-JAVA installation:
+JAVA 8 installation:
 
 *Based on [this repo](https://github.com/chrishantha/install-java/tree/63997dc81aaf9184ffe715d7381fa822bd39f357)*
 1. Download the required `tar.gz` files from Oracle, place them at base directory:
