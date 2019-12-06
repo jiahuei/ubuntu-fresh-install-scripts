@@ -6,18 +6,20 @@ Tested on Ubuntu 16.04.3
 ## Instructions
 1. Download your relevant NVIDIA CUDA `run` file and place it inside `cuda` directory
 2. Run `bash 1_disable_nouveau.sh` and reboot as instructed
-3. Run `bash 2_install_nvidia_driver_cuda.sh`
+3. At the login screen, type `Ctrl + Alt + F1` to switch into text mode
+4. Login to your user, `cd` to the base directory containing the scripts
+5. Run `bash 2_install_nvidia_driver_cuda.sh`
     1. At the CUDA installation screen, under "Driver", 
     select "Do not install OpenGL" and verify that the "X config" option is not selected.
     For prompts, say "no" to "OpenGL" and "NVIDIA Xserver"
     2. Verify that both driver and CUDA versions are correct
-4. Run `bash 3_install_essential_softwares.sh`
+6. Run `bash 3_install_essential_softwares.sh`
 
 ---
 JAVA 8 installation:
 
 *Based on [this repo](https://github.com/chrishantha/install-java/tree/63997dc81aaf9184ffe715d7381fa822bd39f357)*
-1. Download the required `tar.gz` files from Oracle, place them at base directory:
+1. Download the required `tar.gz` files from Oracle, place them at the base directory:
     - [JDK 8](https://www.oracle.com/technetwork/es/java/javase/downloads/jdk8-downloads-2133151.html)
     - [JCE 8](https://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html)
 2. Run `yes | sudo bash /install-java/install-java.sh -f /jdk-8u231-linux-x64.tar.gz`
