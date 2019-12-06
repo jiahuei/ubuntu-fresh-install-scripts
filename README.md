@@ -46,9 +46,11 @@ otherwise pass in your CUDA version and `run` file name:
     - Google Chrome
     - Dropbox
     - AnyDesk v5.1.1-1
-    - Docker and Nvidia Container Toolkit
+    - Docker and NVIDIA Container Toolkit
     - TexStudio (with TexLive)
     - PyCharm
+
+- To only install Docker and NVIDIA Container Toolkit, run `bash docker_with_nvidia.sh`
 
 - If your docker has no internet access (perhaps due to DNS issue), 
 run `bash docker_no_internet.sh`
