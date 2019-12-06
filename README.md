@@ -9,6 +9,15 @@ and verify that both driver and CUDA versions are correct
 4. Run `bash 3_install_essential_softwares.sh`
 
 ---
+JAVA installation:
+
+*Based on [this repo](https://github.com/chrishantha/install-java/tree/63997dc81aaf9184ffe715d7381fa822bd39f357)*
+1. Download the required `tar.gz` files from Oracle, place them at base directory:
+    - [JDK 8](https://www.oracle.com/technetwork/es/java/javase/downloads/jdk8-downloads-2133151.html)
+    - [JCE 8](https://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html)
+2. Run `yes | sudo bash /install-java/install-java.sh -f /jdk-8u231-linux-x64.tar.gz`
+
+---
 NOTES:
 
 - `2_install_nvidia_driver_cuda.sh` assumes CUDA version `10.2` with `cuda_10.2.89_440.33.01_linux.run`, 
@@ -44,6 +53,7 @@ run `bash docker_no_internet.sh`
 +-- 3_install_essential_softwares.sh
 +-- docker_with_nvidia.sh
 +-- docker_no_internet.sh
++-- {java tar.gz files for java installation}
 ```
 
 ## Misc
