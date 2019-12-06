@@ -13,6 +13,10 @@ Tested on Ubuntu 16.04.3
     select "Do not install OpenGL" and verify that the "X config" option is not selected.
     For prompts, say "no" to "OpenGL" and "NVIDIA Xserver"
     2. Verify that both driver and CUDA versions are correct
+    3. Optional: Run CUDA demos.
+        1. Go to your `NVIDIA_CUDA-x.x_Samples` folder and issue `make`
+        2. Go to `NVIDIA_CUDA-x.x_Samples/bin/x86_64/linux/release/`, 
+        and run `./deviceQuery` and `./bandwidthTest`, both should output "PASS"
 6. Either reboot or issue `sudo service lightdm start` to go back to GUI mode
 7. Run `bash 3_install_essential_softwares.sh`
 
