@@ -6,8 +6,10 @@ Tested on Ubuntu 16.04.3
 ## Instructions
 1. Download your relevant NVIDIA CUDA `run` file and place it inside `cuda` directory
 2. Run `bash 1_disable_nouveau.sh` and reboot as instructed
-3. Run `bash 2_install_nvidia_driver_cuda.sh`, 
-and verify that both driver and CUDA versions are correct
+3. Run `bash 2_install_nvidia_driver_cuda.sh`
+    1. At the CUDA installation screen, under "Driver", select "Do not install OpenGL".
+    For CUDA 9.0, say "no" to "OpenGL" and "NVIDIA Xserver"
+    2. Verify that both driver and CUDA versions are correct
 4. Run `bash 3_install_essential_softwares.sh`
 
 ---
@@ -22,19 +24,22 @@ JAVA 8 installation:
 ---
 NOTES:
 
+- `1_disable_nouveau.sh` will freeze any upgrades to kernels.
+
 - `2_install_nvidia_driver_cuda.sh` assumes CUDA version `10.2` with `cuda_10.2.89_440.33.01_linux.run`, 
 otherwise pass in your CUDA version and `run` file name:
 `bash 2_install_nvidia_driver_cuda.sh 9.0 cuda_9.0.176_384.81_linux.run`
+    - For Ubuntu kernel mismatch issues, install standalone NVIDIA graphics driver prior to installing CUDA. 
 
 - `3_install_essential_softwares.sh` will install the following:
-  - Python 2 PIP
-  - openssh-server
-  - Google Chrome
-  - Dropbox
-  - AnyDesk v5.1.1-1
-  - Docker and Nvidia Container Toolkit
-  - TexStudio (with TexLive)
-  - PyCharm
+    - Python 2 PIP
+    - openssh-server
+    - Google Chrome
+    - Dropbox
+    - AnyDesk v5.1.1-1
+    - Docker and Nvidia Container Toolkit
+    - TexStudio (with TexLive)
+    - PyCharm
 
 - If your docker has no internet access (perhaps due to DNS issue), 
 run `bash docker_no_internet.sh`
