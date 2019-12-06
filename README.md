@@ -9,7 +9,7 @@ Tested on Ubuntu 16.04.3
 3. Run `bash 2_install_nvidia_driver_cuda.sh`
     1. At the CUDA installation screen, under "Driver", 
     select "Do not install OpenGL" and verify that the "X config" option is not selected.
-    For CUDA 9.0, say "no" to "OpenGL" and "NVIDIA Xserver"
+    For prompts, say "no" to "OpenGL" and "NVIDIA Xserver"
     2. Verify that both driver and CUDA versions are correct
 4. Run `bash 3_install_essential_softwares.sh`
 
