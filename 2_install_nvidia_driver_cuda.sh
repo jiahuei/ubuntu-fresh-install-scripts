@@ -2,8 +2,8 @@
 
 # wget http://us.download.nvidia.com/XFree86/Linux-x86_64/384.130/NVIDIA-Linux-x86_64-384.130.run
 
-CUDA_VER=${1:-'9.0'}
-CUDA_RUNFILE=${1:-'cuda_9.0.176_384.81_linux.run'}
+CUDA_VER=${1:-'10.2'}
+CUDA_RUNFILE=${2:-'cuda_10.2.89_440.33.01_linux.run'}
 printf "\n==> NOTE: Installing CUDA ${CUDA_VER} from ${CUDA_RUNFILE}, alternatively pass in the desired version and runfile\n"
 
 chmod -R a+x .

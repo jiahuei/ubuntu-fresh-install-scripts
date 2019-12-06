@@ -3,7 +3,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
 cd ${DIR}
 
-if ! ls ./Others/anydesk*.deb >/dev/null 2>&1;
+if ! ls ./others/anydesk*.deb >/dev/null 2>&1;
 then
     printf "\nPlease download the .deb files for AnyDesk\n"
     exit 1
@@ -23,8 +23,8 @@ sudo apt -y install openssh-server
 ###
 printf "\n==> Installing Chrome\n"
 FILE="google-chrome-stable_current_amd64.deb"
-wget --directory-prefix=./Others "https://dl.google.com/linux/direct/${FILE}"
-sudo apt -y install ./Others/${FILE}
+wget --directory-prefix=./others "https://dl.google.com/linux/direct/${FILE}"
+sudo apt -y install ./others/${FILE}
 
 #printf "\n==> Installing Chrome from repo\n"
 #wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
@@ -37,9 +37,9 @@ printf "\n==> Installing Dropbox\n"
 FILE="dropbox_2019.02.14_amd64.deb"
 sudo apt -y update
 sudo apt -y install python3-gpgme
-wget --directory-prefix=./Others "https://www.dropbox.com/download?dl=packages/ubuntu/${FILE}"
+wget --directory-prefix=./others "https://www.dropbox.com/download?dl=packages/ubuntu/${FILE}"
 sudo apt -y update
-sudo apt -y install ./Others/${FILE}
+sudo apt -y install ./others/${FILE}
 nautilus --quit
 
 #printf "\n==> Installing Dropbox from repo\n"
@@ -52,7 +52,7 @@ nautilus --quit
 ###
 printf "\n==> Installing AnyDesk v5.1.1-1\n"
 sudo apt -y update
-sudo apt -y install ./Others/anydesk_5.1.1-1_amd64.deb
+sudo apt -y install ./others/anydesk_5.1.1-1_amd64.deb
 
 ###
 # Install Docker and Nvidia Container Toolkit
@@ -74,7 +74,7 @@ sudo snap install pycharm-community --classic
 printf "\n==> All done !!!\n"
 
 # printf "\nInstalling Java 8\n"
-# sudo bash install-java/install-java.sh -f Others/jdk-8u231-linux-x64.tar.gz
+# sudo bash install-java/install-java.sh -f others/jdk-8u231-linux-x64.tar.gz
 
 
 

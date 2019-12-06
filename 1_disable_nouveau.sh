@@ -3,8 +3,8 @@
 printf "==> Freezing kernel upgrades.\n"
 sudo apt-mark hold linux-image-* linux-headers-* linux-base linux-firmware linux-generic
 
-sudo apt-get update
-sudo apt-get install build-essential
+sudo apt-get -y update
+sudo apt-get -y install build-essential
 
 printf "==> Trying to remove '/etc/X11/xorg.conf'.\n"
 sudo rm /etc/X11/xorg.conf 

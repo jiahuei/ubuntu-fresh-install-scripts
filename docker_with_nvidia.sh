@@ -2,6 +2,8 @@
 ### This script installs Docker for Ubuntu using the repository
 # https://docs.docker.com/install/linux/docker-ce/ubuntu/#install-using-the-repository
 
+#DOCKER_CRED_VER='0.6.3'
+
 printf "\n==> Installing Docker\n"
 # Update the apt package index
 sudo apt-get -y update
@@ -12,7 +14,8 @@ sudo apt-get -y install \
     ca-certificates \
     curl \
     gnupg-agent \
-    software-properties-common
+    software-properties-common \
+    pass
 
 # Add Docker’s official GPG key and verify
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
@@ -32,6 +35,15 @@ sudo apt-get -y install docker-ce docker-ce-cli containerd.io
 
 # Verify installation
 sudo docker run hello-world
+
+
+### Docker Credential Helper
+# https://github.com/docker/docker-credential-helpers/issues/102#issuecomment-388974092
+#wget "https://github.com/docker/docker-credential-helpers/releases/download/v${DOCKER_CRED_VER}/docker-credential-pass-v${DOCKER_CRED_VER}-amd64.tar.gz" && tar -xf "docker-credential-pass-v${DOCKER_CRED_VER}-amd64.tar.gz" && chmod +x docker-credential-pass && sudo mv docker-credential-pass /usr/local/bin/
+#gpg2 --gen-key
+#pass init "<Your Name>"
+#sed -i '0,/{/s/{/{\n\t"credsStore": "pass",/' ~/.docker/config.json
+
 
 ### This script installs Nvidia Container Toolkit for Docker for Ubuntu
 # https://github.com/NVIDIA/nvidia-docker/blob/f65beafbfa8734328af38a4dd8270687f6507abb/README.md
