@@ -1,5 +1,7 @@
 # Installation scripts for fresh Ubuntu
-Some scripts to automate installation of NVIDIA drivers, CUDA, other softwares
+Some scripts to automate installation of NVIDIA drivers, CUDA, other softwares.
+
+Tested on Ubuntu 16.04.3
 
 ## Instructions
 1. Download your relevant NVIDIA CUDA `run` file and place it inside `cuda` directory
