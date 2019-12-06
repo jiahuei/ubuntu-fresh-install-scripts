@@ -13,6 +13,7 @@ sudo service lightdm stop
 
 printf "\n==> Executing CUDA runfile.\n"
 # sudo apt-get -y install nvidia-384 nvidia-modprobe
+# sudo apt-get install linux-headers-$(uname -r)
 sudo bash cuda/"${CUDA_RUNFILE}"
 
 printf "\n==> Exporting environment variables.\n"
