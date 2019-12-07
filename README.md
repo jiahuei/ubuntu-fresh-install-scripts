@@ -12,7 +12,7 @@ Tested on Ubuntu 16.04.3
     1. At the CUDA installation screen, under "Driver", 
     select "Do not install OpenGL" and verify that the "X config" option is not selected.
     For prompts, say "no" to "OpenGL" and "NVIDIA Xserver"
-    2. Verify that both driver and CUDA versions are correct
+    2. After installation, verify that both driver and CUDA versions are correct
     3. Optional: Run CUDA demos.
         1. Go to your `NVIDIA_CUDA-x.x_Samples` folder and issue `make`
         2. Go to `NVIDIA_CUDA-x.x_Samples/bin/x86_64/linux/release/`, 
