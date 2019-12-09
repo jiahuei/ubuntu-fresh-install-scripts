@@ -37,7 +37,7 @@ printf "\n==> Installing Dropbox\n"
 FILE="dropbox_2019.02.14_amd64.deb"
 sudo apt -y update
 sudo apt -y install python3-gpgme
-wget --directory-prefix=./others "https://www.dropbox.com/download?dl=packages/ubuntu/${FILE}"
+wget --directory-prefix=./others "https://www.dropbox.com/download?dl=packages/ubuntu/${FILE}" -O ${FILE}
 sudo apt -y update
 sudo apt -y install ./others/${FILE}
 nautilus --quit
