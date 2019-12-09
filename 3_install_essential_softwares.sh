@@ -37,13 +37,13 @@ printf "\n==> Installing Dropbox\n"
 FILE="dropbox_2019.02.14_amd64.deb"
 sudo apt -y update
 sudo apt -y install python3-gpgme
-wget --directory-prefix=./others "https://www.dropbox.com/download?dl=packages/ubuntu/${FILE}"
+#wget "https://www.dropbox.com/download?dl=packages/ubuntu/${FILE}" -O ./others/${FILE}
 sudo apt -y update
 sudo apt -y install ./others/${FILE}
 nautilus --quit
 
 #printf "\n==> Installing Dropbox from repo\n"
-#sudo echo "deb [arch=amd64] https://linux.dropbox.com/ubuntu xenial main" > /etc/apt/sources.list.d/dropbox.list
+#sudo tee /etc/apt/sources.list.d/dropbox.list <<< "deb [arch=amd64] https://linux.dropbox.com/ubuntu xenial main"
 #sudo apt-key adv --keyserver pgp.mit.edu --recv-keys 1C61A2656FB57B7E4DE0F4C1FC918B335044912E
 #sudo apt -y update
 #sudo apt -y install python3-gpgme dropbox
@@ -60,9 +60,9 @@ sudo bash ./docker_with_nvidia.sh
 
 ###
 printf "\n==> Installing TexStudio\n"
-sudo add-apt-repository ppa:sunderme/texstudio
+sudo add-apt-repository -y ppa:sunderme/texstudio
 sudo apt -y update
-sudo apt -y install texstudio
+sudo apt -y install texlive-full texstudio
 
 ###
 printf "\n==> Installing PyCharm\n"

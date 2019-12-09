@@ -9,9 +9,9 @@ Tested on Ubuntu 16.04.3
 3. At the login screen, type `Ctrl + Alt + F1` to switch into text mode
 4. Login to your user, `cd` to the base directory containing the scripts
 5. Run `bash 2_install_nvidia_driver_cuda.sh`
-    1. At the CUDA installation screen, under "Driver", 
+    1. At the CUDA installation screen, under "Options", "Driver Options", 
     select "Do not install OpenGL" and verify that the "X config" option is not selected.
-    For prompts, say "no" to "OpenGL" and "NVIDIA Xserver"
+    For prompts (CUDA 9 or earlier), say "no" to "OpenGL" and "NVIDIA Xserver"
     2. After installation, verify that both driver and CUDA versions are correct
     3. Optional: Run CUDA demos.
         1. Go to your `NVIDIA_CUDA-x.x_Samples` folder and issue `make`
