@@ -15,7 +15,7 @@ Performs installation of the following:
     - AnyDesk v5.1.1-1
     - Docker and NVIDIA Container Toolkit
     - TexLive and TexStudio
-    - PyCharm
+    - PyCharm Community
 
 
 ## Instructions
@@ -49,6 +49,19 @@ Performs installation of the following:
 3. Verify by running `java -version`
 
 
+## Potential issues
+
+- `apt update` stuck at 0% (example: `0% [Connecting to us.archive.ubuntu.com (2001:67c:1562::15)]`):
+    - Follow [this answer](https://askubuntu.com/a/575130) to allow requests to prefer IPv4 instead of IPv6
+
+- Ubuntu kernel mismatch issues during NVIDIA driver installation:
+    1. Install standalone graphics driver 
+    2. Run CUDA runfile or `2_install_nvidia_driver_cuda.sh`
+    3. Deselect driver at the CUDA installation screen
+
+- Docker has no internet access (perhaps due to DNS issue): 
+    - Run `bash docker_no_internet.sh`
+
 ## NOTES
 
 - `1_disable_nouveau.sh` will freeze any upgrades to kernels.
@@ -56,14 +69,10 @@ You can unfreeze them with `sudo apt-mark unhold xxx`
 
 - `2_install_nvidia_driver_cuda.sh` assumes CUDA version `10.2` with `cuda_10.2.89_440.33.01_linux.run`, 
 otherwise pass in your CUDA version and `run` file name:
-`bash 2_install_nvidia_driver_cuda.sh 9.0 cuda_9.0.176_384.81_linux.run`
-    - For Ubuntu kernel mismatch issues, install standalone NVIDIA graphics driver prior to installing CUDA, 
-    and deselecting driver at the CUDA installation screen. 
+`bash 2_install_nvidia_driver_cuda.sh 9.0 cuda_9.0.176_384.81_linux.run` 
 
 - To only install Docker and NVIDIA Container Toolkit, run `bash docker_with_nvidia.sh`
 
-- If your docker has no internet access (perhaps due to DNS issue), 
-run `bash docker_no_internet.sh`
 
 
 ## Directory structure
