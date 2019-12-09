@@ -4,20 +4,22 @@
 **Steps:**
 1. Create a directory
 2. Place required files
-3. Place Dockerfile at root, the Dockerfile can be any name
+3. Place `Dockerfile` at root, the `Dockerfile` can be any name
 4. Run `docker build -t user/image_name -f Dockerfile_name .`
 
 **Dockerfile commands:**
 1. RUN:
-    * The RUN instruction will execute any commands in a new layer on top of the current image and commit the results. 
+    * The `RUN` instruction will execute any commands in a new layer on top of the current image and commit the results. 
     * The resulting committed image will be used for the next step in the Dockerfile.
 
 2. WORKDIR:
-    * Same effect as `cd`
+    * Same effect as `cd`, sets the working directory for any 
+    `RUN`, `CMD`, `ENTRYPOINT`, `COPY` and `ADD` instructions that follow it in the `Dockerfile`
 
 3. CMD:
-    * There can only be one CMD instruction in a Dockerfile. If you list more than one CMD then only the last CMD will take effect.
-    * CMD tells the container which command it should run when it is started
+    * There can only be one `CMD` instruction in a `Dockerfile`. 
+    If you list more than one `CMD` then only the last `CMD` will take effect.
+    * `CMD` tells the container which command it should run when it is started
 
 ## Restart Docker
 ```bash
@@ -39,7 +41,7 @@ sudo systemctl restart docker
 
 
 ## Purging Unused or Dangling Images, Containers, Volumes, and Networks
-[link](https://www.digitalocean.com/community/tutorials/how-to-remove-docker-images-containers-and-volumes)
+[(link)](https://www.digitalocean.com/community/tutorials/how-to-remove-docker-images-containers-and-volumes)
 
 **Clean up any resources — images, containers, volumes, and networks — that are dangling**
 
@@ -51,12 +53,13 @@ sudo systemctl restart docker
 
 
 ## Images
+
 **List dangling images**
 
 `docker images -f dangling=true`
 
 **Cleanup dangling images**
-[link](https://stackoverflow.com/questions/45142528/what-is-a-dangling-image-and-what-is-an-unused-image/45143234#45143234)
+[(link)](https://stackoverflow.com/questions/45142528/what-is-a-dangling-image-and-what-is-an-unused-image/45143234#45143234)
 
 `docker images --quiet --filter=dangling=true | xargs --no-run-if-empty docker rmi`
 

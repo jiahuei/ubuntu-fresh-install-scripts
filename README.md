@@ -49,7 +49,7 @@ Performs installation of the following:
 3. Verify by running `java -version`
 
 
-## NOTES:
+## NOTES
 
 - `1_disable_nouveau.sh` will freeze any upgrades to kernels.
 You can unfreeze them with `sudo apt-mark unhold xxx`
