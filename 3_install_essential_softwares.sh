@@ -60,9 +60,9 @@ sudo bash ./docker_with_nvidia.sh
 
 ###
 printf "\n==> Installing TexStudio\n"
-sudo add-apt-repository ppa:sunderme/texstudio
+sudo add-apt-repository -y ppa:sunderme/texstudio
 sudo apt -y update
-sudo apt -y install texstudio
+sudo apt -y install texlive-full texstudio
 
 ###
 printf "\n==> Installing PyCharm\n"
