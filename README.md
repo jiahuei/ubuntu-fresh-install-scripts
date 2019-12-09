@@ -52,11 +52,13 @@ Performs installation of the following:
 ## NOTES:
 
 - `1_disable_nouveau.sh` will freeze any upgrades to kernels.
+You can unfreeze them with `sudo apt-mark unhold xxx`
 
 - `2_install_nvidia_driver_cuda.sh` assumes CUDA version `10.2` with `cuda_10.2.89_440.33.01_linux.run`, 
 otherwise pass in your CUDA version and `run` file name:
 `bash 2_install_nvidia_driver_cuda.sh 9.0 cuda_9.0.176_384.81_linux.run`
-    - For Ubuntu kernel mismatch issues, install standalone NVIDIA graphics driver prior to installing CUDA. 
+    - For Ubuntu kernel mismatch issues, install standalone NVIDIA graphics driver prior to installing CUDA, 
+    and deselecting driver at the CUDA installation screen. 
 
 - To only install Docker and NVIDIA Container Toolkit, run `bash docker_with_nvidia.sh`
 
