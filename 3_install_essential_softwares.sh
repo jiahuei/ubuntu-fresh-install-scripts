@@ -33,21 +33,21 @@ sudo apt -y install ./others/${FILE}
 #sudo apt -y install google-chrome-stable
 
 ###
-#printf "\n==> Installing Dropbox\n"
-#FILE="dropbox_2019.02.14_amd64.deb"
-#sudo apt -y update
-#sudo apt -y install python3-gpgme
-#wget "https://www.dropbox.com/download?dl=packages/ubuntu/${FILE}" -O ./others/${FILE}
-#sudo apt -y update
-#sudo apt -y install ./others/${FILE}
-#nautilus --quit
-
-printf "\n==> Installing Dropbox from repo\n"
-sudo tee /etc/apt/sources.list.d/dropbox.list <<< "deb [arch=amd64] https://linux.dropbox.com/ubuntu xenial main"
-sudo apt-key adv --keyserver pgp.mit.edu --recv-keys 1C61A2656FB57B7E4DE0F4C1FC918B335044912E
+printf "\n==> Installing Dropbox\n"
+FILE="dropbox_2019.02.14_amd64.deb"
 sudo apt -y update
-sudo apt -y install python3-gpgme dropbox
+sudo apt -y install python3-gpgme
+#wget "https://www.dropbox.com/download?dl=packages/ubuntu/${FILE}" -O ./others/${FILE}
+sudo apt -y update
+sudo apt -y install ./others/${FILE}
 nautilus --quit
+
+#printf "\n==> Installing Dropbox from repo\n"
+#sudo tee /etc/apt/sources.list.d/dropbox.list <<< "deb [arch=amd64] https://linux.dropbox.com/ubuntu xenial main"
+#sudo apt-key adv --keyserver pgp.mit.edu --recv-keys 1C61A2656FB57B7E4DE0F4C1FC918B335044912E
+#sudo apt -y update
+#sudo apt -y install python3-gpgme dropbox
+#nautilus --quit
 
 ###
 printf "\n==> Installing AnyDesk v5.1.1-1\n"
