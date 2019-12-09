@@ -19,7 +19,7 @@ Performs installation of the following:
 
 
 ## Instructions
-General setup:
+**General setup:**
 
 1. Clone this repo
 2. Download your relevant NVIDIA CUDA `run` file and place it inside `cuda` directory
@@ -39,7 +39,7 @@ General setup:
 8. Run `bash 3_install_essential_softwares.sh`
 
 ---
-JAVA 8 installation:
+**JAVA 8 installation:**
 
 *Based on [this repo](https://github.com/chrishantha/install-java/tree/63997dc81aaf9184ffe715d7381fa822bd39f357)*
 1. Download the required `tar.gz` files from Oracle, place them at the base directory:
