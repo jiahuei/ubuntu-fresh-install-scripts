@@ -62,6 +62,11 @@ Performs installation of the following:
 - Docker has no internet access (perhaps due to DNS issue): 
     - Run `bash docker_no_internet.sh`
 
+- Docker requires root privilege (sudo) to run: 
+    - Run `sudo groupadd docker`, then `sudo usermod -aG docker $USER`
+    - Logout and login again, you should be able to run docker without `sudo`
+
+
 ## NOTES
 
 - `1_disable_nouveau.sh` will freeze any upgrades to kernels.
