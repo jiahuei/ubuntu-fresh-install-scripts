@@ -64,9 +64,19 @@ sudo systemctl restart docker
 `docker images --quiet --filter=dangling=true | xargs --no-run-if-empty docker rmi`
 
 **Remove image**
+Use `docker image rm` or `docker rmi`:
+```bash
+docker image rm jiahuei/tensorflow:1.9.0-gpu
+docker image rm a3c28a34f4f6
+```
 ```bash
 docker rmi jiahuei/tensorflow:1.9.0-gpu
 docker rmi a3c28a34f4f6
+```
+
+**Untag image**
+```bash
+docker image rm --no-prune jiahuei/tensorflow:1.9.0-gpu
 ```
 
 
